@@ -1,0 +1,40 @@
+\usepackage[utf8]{inputenc}
+\usepackage{csquotes}
+\usepackage{graphicx}
+\usepackage{titlesec}
+\usepackage[margin=1in,headheight=20pt,includeheadfoot]{geometry}
+\usepackage{fancyhdr}
+\usepackage[document]{ragged2e}
+\usepackage{enumitem}
+\usepackage[usenames, dvipsnames]{color}
+\usepackage{xifthen}
+\usepackage[hidelinks]{hyperref}
+\usepackage{xcolor}
+\usepackage{textcomp}
+\hypersetup{
+    colorlinks,
+    pdftitle={},
+    pdfauthor={},
+    pdfsubject={},
+    pdfcreator={},
+    pdfproducer={},
+    linkcolor={black!50!black},
+    citecolor={blue!50!black},
+    urlcolor={blue!80!black}
+}
+% Remove metadata about what software we used to create our documents
+%\pdfsuppressptexinfo=1
+% The above option is commented out because Debian uses pdfTeX 1.40.16 and
+% this feature is only available in 1.40.17 and later.
+\usepackage[group-separator={,}]{siunitx}  % Used for formatting numbers
+\usepackage{listings}
+\lstset{basicstyle=\ttfamily\small,showstringspaces=false,upquote=true}
+
+% Fix the ubuntu section numbering (due to a bug in titlesec)
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd{\ttlh@hang}{\parindent\z@}{\parindent\z@\leavevmode}{}{}
+\patchcmd{\ttlh@hang}{\noindent}{}{}{}
+\makeatother
+
+\usepackage{needspace}

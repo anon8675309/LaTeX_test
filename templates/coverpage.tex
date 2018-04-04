@@ -1,0 +1,27 @@
+%%------------------------------------------------------------
+% You'll want to include defines.tex before using this, and
+% obviously any overrides should be done before using this.
+%%------------------------------------------------------------
+% This block of code defines the information to appear in the
+% Title page
+\title{\documentTitle{}}
+\author{Donald Knuth}
+\date{\documentDate{}}
+
+\def \prepared{Prepared for demonstration purposes}
+% End of title page configuration block
+%------------------------------------------------------------
+
+% Definition of \maketitle so we can have a custom title page
+\makeatletter         
+\def\@maketitle{
+    \begin{center}
+        {\Huge \bfseries \sffamily \@title}\\[4ex] 
+        {\LARGE \bfseries \sffamily \prepared{}}\\[4ex]
+	{\Large \@date}\\[8ex]
+    \end{center}
+    \vspace*{\fill}   % push everything else down to the bottom of the page
+    \coverPageBottom
+}
+\makeatother
+%------------------------------------------------------------

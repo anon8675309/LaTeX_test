@@ -1,0 +1,21 @@
+\documentclass{article}
+
+% After including the defines, we can use \templateRoot
+\input{../templates/defines}
+% Fix the templateRoot, since it's not in the standard location this time
+\def\templateRoot{../templates}
+% These are the standard packages we use
+\input{\templateRoot/packages}
+
+\begin{document}
+% Cover page
+\input{\templateRoot/coverpage}
+\thispagestyle{empty}
+\maketitle
+\newpage
+
+% Table of Contents
+\tableofcontents
+\newpage
+
+\end{document}
